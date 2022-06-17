@@ -1,0 +1,17 @@
+000100220429     H*   Change by ANITAL  2022/04/29
+000300210601     H****************************************************************
+000400001025     FMASTERL1IF  E           K        DISK
+000500001025     F            ACTGLP                            KRENAMERPGID2
+000600001025     C           *ENTRY    PLIST
+000700001025     C                     PARM           CHECK   10
+000800001025     C                     READ MASTERL1                 90
+000900200903     C                     READ MASTERL1                 90
+001000150826     C*
+001100001025     C           CHECK     IFGT 1
+001200001025     C                     GOTO ENDFIL
+001300001025     C                     ENDIF
+001400200922     C*
+001500170724     C*
+001600001025     C           ENDFIL    TAG
+001700001025     C                     MOVE '1'       *INLR
+001800001025     C                     RETRN
